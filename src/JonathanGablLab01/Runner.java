@@ -3,18 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package emptyjavaproject;
+package JonathanGablLab01;
 
 /**
  *
  * @author paul.kline
  */
-public class Main {
+import java.util.Scanner;
+public class Runner {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Roller roller = new Roller();
+        Counter counter = new Counter();
+        roller.startRolling();
         // TODO code application logic here
     }
     
