@@ -9,15 +9,26 @@ package JonathanGablLab01;
  *
  * @author jonathan.gabl
  */
+import java.util.Scanner;
 public class Roller {
     private int currentRoll;
+    private Scanner input;
+    private int rolls;
         public Roller(){
         currentRoll=0;
+        input = new Scanner(System.in);
     };
-    public int rollDie(int sides){
-            return ((int)(Math.random()*sides+1));        
+    public void rollDie(int rolls,int sides,Counter counter){
+        for(int i = 0; i<rolls;i++){
+            counter.addValue((int)(Math.random()*sides+1));  
+        }
+        counter.printValues(rolls);
     };
-    public void startRolling(){
-        System.out.println("How often should I print?");
+    public void startRolling(Die die, Counter counter){
+        System.out.print("How often should I print?");
+        rolls = input.nextInt();                
+        while (true){
+        rollDie(rolls,die.getSides(),counter);
+        }
     }
 }

@@ -11,6 +11,7 @@ package JonathanGablLab01;
  */
 public class Counter {
     private int[] counter;
+    private int totalRolls;
     
     public Counter(){
         counter = new int[6];
@@ -18,9 +19,11 @@ public class Counter {
     public void addValue(int sideRolled){
         counter[sideRolled-1]=counter[sideRolled-1]+1;
     }
-    public void printValues(){
+    public void printValues(int rolls){
+        totalRolls+=rolls;
+        System.out.println("After "+totalRolls+" rolls, the distribution is :");
         for(int i =0;i<counter.length;i++){
-            System.out.println((i+1)+": "+counter[i]);
+            System.out.println((i+1)+" was rolled "+counter[i]+" times (+"+counter[i]*100/totalRolls+"%)");
         }
     }
 }

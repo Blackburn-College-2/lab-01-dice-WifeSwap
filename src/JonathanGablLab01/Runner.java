@@ -9,7 +9,7 @@ package JonathanGablLab01;
  *
  * @author paul.kline
  */
-import java.util.Scanner;
+
 public class Runner {
 
     /**
@@ -18,7 +18,8 @@ public class Runner {
     public static void main(String[] args) {
         Roller roller = new Roller();
         Counter counter = new Counter();
-        roller.startRolling();
+        Die die = new Die();
+        roller.startRolling(die,counter);
         // TODO code application logic here
     }
     
