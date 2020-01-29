@@ -19,9 +19,13 @@ public class Runner {
     public static void main(String[] args) {
         Roller roller = new Roller();
         Scanner input = new Scanner(System.in);
-        System.out.println("how many sides are on the die");
-        Die die = new Die(input.nextInt());
+        
+        //creates die with sides based on user input and array of corresponding size
+        System.out.println("how many sides are on the die");       
+        Die die = new Die(input.nextInt());        
         Counter counter = new Counter(die.getSides());
+        
+        //creatues
         System.out.println("how many dies should I roll?");
         int diesToRoll = input.nextInt();
         System.out.print("How often should I print?");
