@@ -10,18 +10,23 @@ package JonathanGablLab01;
  * @author jonathan.gabl
  */
 public class Die {
+
     private int sides;
-    
-    public Die(){
+
+    public Die() {
         sides = 6;
-    };
-    public Die(int sides){
+    }
+
+    ;
+    public Die(int sides) {
         this.sides = sides;
     }
-    public int getSides(){
+
+    public int getSides() {
         return sides;
     }
-    public void setSides(int sides){
-            this.sides = sides;
+
+    public void setSides(int sides) {
+        this.sides = sides;
     }
 }

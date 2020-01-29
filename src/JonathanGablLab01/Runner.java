@@ -10,6 +10,7 @@ package JonathanGablLab01;
  * @author paul.kline
  */
 import java.util.Scanner;
+
 public class Runner {
 
     /**
@@ -22,11 +23,11 @@ public class Runner {
         Die die = new Die(input.nextInt());
         Counter counter = new Counter(die.getSides());
         System.out.println("how many dies should I roll?");
-        int diesToRoll = input.nextInt();                
+        int diesToRoll = input.nextInt();
         System.out.print("How often should I print?");
         roller.startRolling(die, diesToRoll, input.nextInt(), counter);
-        
+
         // TODO code application logic here
     }
-    
+
 }
