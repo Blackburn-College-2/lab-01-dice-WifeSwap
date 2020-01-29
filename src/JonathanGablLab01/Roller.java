@@ -14,21 +14,22 @@ public class Roller {
     private int currentRoll;
     private Scanner input;
     private int rolls;
+    private int diesToRoll;
         public Roller(){
         currentRoll=0;
         input = new Scanner(System.in);
     };
-    public void rollDie(int rolls,int sides,Counter counter){
+    public void rollDie(int rolls,int sides, int diesToRoll, Counter counter){
         for(int i = 0; i<rolls;i++){
+            for(int a = 0; a<diesToRoll; a++){
             counter.addValue((int)(Math.random()*sides+1));  
+            }
         }
-        counter.printValues(rolls);
+        counter.printValues(rolls,sides,diesToRoll);
     };
-    public void startRolling(Die die, Counter counter){
-        System.out.print("How often should I print?");
-        rolls = input.nextInt();                
+    public void startRolling(Die die,int diesToRoll, int rolls, Counter counter){                
         while (true){
-        rollDie(rolls,die.getSides(),counter);
+        rollDie(rolls,die.getSides(),diesToRoll,counter);
         }
     }
 }

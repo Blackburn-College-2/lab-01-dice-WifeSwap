@@ -13,17 +13,17 @@ public class Counter {
     private int[] counter;
     private int totalRolls;
     
-    public Counter(){
-        counter = new int[6];
+    public Counter(int size){
+        counter = new int[size];
     };
     public void addValue(int sideRolled){
         counter[sideRolled-1]=counter[sideRolled-1]+1;
     }
-    public void printValues(int rolls){
+    public void printValues(int rolls, int sides, int diesRolled){
         totalRolls+=rolls;
         System.out.println("After "+totalRolls+" rolls, the distribution is :");
         for(int i =0;i<counter.length;i++){
-            System.out.println((i+1)+" was rolled "+counter[i]+" times (+"+counter[i]*100/totalRolls+"%)");
+            System.out.println((i+1)+" was rolled "+counter[i]+" times (+"+counter[i]*100/totalRolls/diesRolled+"%)");
         }
     }
 }
